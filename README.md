@@ -2,25 +2,27 @@
 ### Deep learning model writing korean novel
 ### 한글 소설을 생성하는 딥러닝 모델
 
-Lablup(래블업) - Just model it 이벤트 참가하여 진행한 프로젝트입니다.
+Lablup(래블업) - [Just model it 이벤트](https://events.backend.ai/just-model-it/) 참가하여 진행한 프로젝트입니다.
 
-https://events.backend.ai/just-model-it/
 
 ### 블랙오리바나나 팀
-![blackoribanana](https://github.com/IllgamhoDuck/ko_novel_generator/blob/master/blackoribanana.png)
+<img src="https://github.com/IllgamhoDuck/ko_novel_generator/blob/master/blackoribanana.png" width="300">
 
 웹사이트 기반으로 사람들이 함께 참여하여 소설을 작성하는 인공지능을 학습하고 이를 활용하여 인공지능과 함께 릴레이 소설을 써내려가는 것을 목적으로 하는 프로젝트입니다. 그리고 이 프로젝트의 핵심적인 부분인 한글 소설을 작성하는 딥러닝 모델을 구축하고자 합니다.
 
 #### 1. 인간들의 참여 - 학습 데이터 선정 및 결과물 생성
 
->사람들이 데이터로 사용할 소설을 고르는 과정부터 참여하여 최종적으로 만들어진 인공지능을 활용하여 인공지능이 소설을 작성할시 선택할 키워드와 문장 길이 수도 참여하여 선택하게 됩니다. 여러 사람이 다양한 선택지를 제시하면 최종 선택은 사람들의 투표를 통해서 결정하게 됩니다. 이를 통해 사람들이 직접 데이터를 고르는 과정부터 학습된 인공지능을 활용하여 결과물을 만들어내는 모든 과정에 함께 참여하여 다함께 하나의 소설을 완성해나가는 프로젝트입니다.
+> 사람들이 데이터로 사용할 소설을 고르는 과정부터 참여하여 최종적으로 만들어진 인공지능을 활용하여 인공지능이 소설을 작성할시 선택할 키워드와 문장 길이 수도 참여하여 선택하게 됩니다.   
+> 여러 사람이 다양한 선택지를 제시하면 최종 선택은 사람들의 투표를 통해서 결정하게 됩니다.  
+> 이를 통해 사람들이 직접 데이터를 고르는 과정부터 학습된 인공지능을 활용하여 결과물을 만들어내는 모든 과정에 함께 참여하여 다함께 하나의 소설을 완성해나가는 프로젝트입니다.
 
 #### 2. 릴레이 소설 작성 방식 - 인간 -> 인공지능 턴 방식
 
-> 릴레이 소설처럼 소설의 일부를 작성후 새로운 키워드로 이어서 소설을 써내려가며 이를 반복하여 소설을 점차점차 완성시켜나가는 방식입니다. 또한, 소설을 써내려가는 도중에 새로운 소설을 학습시켜 인공지능이 다양한 스타일의 소설을 소화할 수 있도록 하고자 합니다.
+> 릴레이 소설처럼 소설의 일부를 작성후 새로운 키워드로 이어서 소설을 써내려가며 이를 반복하여 소설을 점차점차 완성시켜나가는 방식입니다.  
+> 또한, 소설을 써내려가는 도중에 새로운 소설을 학습시켜 인공지능이 다양한 스타일의 소설을 소화할 수 있도록 하고자 합니다.  
 
-성능이 가장 우수한 모델을 만드는 것을 목표로 하지 않습니다.
-인공지능을 모르는 인간들이 인공지능을 체험하고 즐길 수 있는 것을 목표로 하고 있습니다.
+성능이 가장 우수한 모델을 만드는 것을 목표로 하지 않습니다.  
+인공지능을 모르는 인간들이 인공지능을 체험하고 즐길 수 있는 것을 목표로 하고 있습니다.  
 
 ## 어떤 계기로 만들었는지
 인공지능이란 용어가 인간들에게 익숙해진지 오래지만, 인공지능이 직접 활용해볼 수 있는 곳은 한정적입니다. 일상 생활에서 인공지능 기술이 녹아들어있지만 이를 인지하기 힘듭니다. https://experiments.withgoogle.com/ 와 같은 대표적인 인공지능 활용 웹사이트는 있지만, 학습된 인공지능을 사용할 수 있을 뿐입니다. 물론 인공지능을 자기 입맛대로 직접 학습하는 것은 쉽습니다.
@@ -55,6 +57,7 @@ https://events.backend.ai/just-model-it/
 9. `opt.py` - Option의 약자로, 전반적인 딥러닝 학습에 관련한 중요한 변수들을 저장
 10. `train.py` - 소설 학습
 11. `vocab_generator.py` - 소설을 바탕으로 사전 생성
+  
 
 ## 사용 방법
 사용 방법은 매우 간단합니다. 소설 전처리 과정을 제외하면 말이죠. 그 소설 전처리 코드는 아직 올려지지 않았기에 직접 하셔야 합니다.
@@ -93,6 +96,34 @@ resume은 첫 입력에는 default가 False이기에 별도로 신경쓸 필요�
 - "맞아 난 거위야"
 
 생성된 출력 텍스트 파일은 `generate`폴더의 `result.txt`에 저장되어 있습니다.
+
+
+
+## API(Flask)
+ko_novel_generator를 web에서 사용하기 위한 API 서버 (python Flask)
+
+#### API LIST
+- `put_Human_txt (get, post)`  
+사용자의 텍스트를 입력하여 추가 학습 후, 이어서 text를 generate함  
+  ###### paramters
+  1. `contents_id` : 사용자가 web에서 입력한 내용(contents)의 id
+  2. `is_first` : 최초 작성여부, True일 경우 신규 학습, False일 경우 이어서 학습함    
+  ###### result
+  생성한 text를 DB에 저장, return값은 없음
+  
+#### API 사용 방법
+###### depengency
+  - `flask` / `flask_restful` / `flask_script` / `flask_migrate`
+  - `sqlalchemy`
+  - `marshmallow`
+  - `pytorch`  
+###### execute
+1. `config.py`  
+  `SQLALCHEMY_DATABASE_URI`에 DB 정보 입력
+2. `run.py`  
+  host(`YOUR_LOCAL_HOST`)에 호스트 정보 입력 후 실행
+  
+  
 
 ## 그외 테스트해본 모델
 #### l2w(Learning to Write) - https://github.com/ari-holtzman/l2w
